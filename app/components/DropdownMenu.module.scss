@@ -1,12 +1,19 @@
+.nav {
+    grid-column: 1 / 4;
+    grid-row: 1/ 2;
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+
 .icon {
     height: 30px;
     width: 30px;
-    border: 1px solid black;
     position: relative;
 
     &::after {
         width: 15px;
-        height: 1px;
+        height: 2px;
         content: '';
         display: inline-block;
         position: absolute;
@@ -17,7 +24,7 @@
 
     &::before {
         width: 15px;
-        height: 1px;
+        height: 2px;
         content: '';
         display: inline-block;
         position: absolute;
@@ -29,4 +36,18 @@
 }
 
 .dropdown {
+    position: absolute;
+    border: 1px solid;
+    padding: 1rem;
+    top: 1rem;
+    right: 0rem;
+
+    ul {
+        border-bottom: 1px solid black;
+        margin-bottom: 1rem;
+    }
+
+    ul:last-child {
+        border-bottom: none;
+    }
 }

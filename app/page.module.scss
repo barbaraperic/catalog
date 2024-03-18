@@ -2,9 +2,9 @@
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, 100px);
+    grid-template-rows: repeat(6, 80px);
     gap: 1rem;
-    margin: auto 1rem;
+    margin: 1rem;
 }
 
 .header {
