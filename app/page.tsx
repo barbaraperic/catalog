@@ -1,9 +1,10 @@
+import DropdownMenu from './components/DropdownMenu'
 import styles from './page.module.scss'
 
 export default function Home() {
     return (
         <div className={styles.container}>
-            <nav className={styles.nav}>
+            {/* <nav className={styles.nav}>
                 <ul>
                     <li>About</li>
                     <li>LinkedIn</li>
@@ -13,7 +14,8 @@ export default function Home() {
                     <li>Notes</li>
                     <li>Projects</li>
                 </ul>
-            </nav>
+            </nav> */}
+            <DropdownMenu />
             <header className={styles.header}></header>
             <main></main>
             <footer></footer>
