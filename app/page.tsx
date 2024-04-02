@@ -1,24 +1,11 @@
-import DropdownMenu from './components/DropdownMenu'
 import styles from './page.module.scss'
 
 export default function Home() {
-    return (
-        <div className={styles.container}>
-            {/* <nav className={styles.nav}>
-                <ul>
-                    <li>About</li>
-                    <li>LinkedIn</li>
-                    <li>GitHub</li>
-                </ul>
-                <ul>
-                    <li>Notes</li>
-                    <li>Projects</li>
-                </ul>
-            </nav> */}
-            <DropdownMenu />
-            <header className={styles.header}></header>
-            <main></main>
-            <footer></footer>
-        </div>
-    )
+  return (
+    <div className={styles.container}>
+      <header className={styles.header}></header>
+      <main className={styles.main}></main>
+      <footer className={styles.footer}></footer>
+    </div>
+  )
 }

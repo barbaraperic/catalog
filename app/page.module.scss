@@ -1,83 +1,69 @@
 .container {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, 80px);
-    gap: 1rem;
-    margin: 1rem;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 100px auto 120px;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  gap: 1rem;
+  margin: 1rem;
 }
 
 .header {
-}
-
-.nav {
-    grid-column: 1 / 4;
-    grid-row: 1/ 2;
-    display: flex;
-    justify-content: center;
-}
-
-.nav > * {
-    border-right: 10px solid black;
-    text-align: center;
-}
-
-.nav ul > li {
-    padding: 1rem;
-    font-weight: 700;
-    font-size: var(--h5);
-}
-
-.nav ul {
-    padding-left: 1rem;
+  border: 1px solid;
+  grid-area: 'header';
 }
 
 .main {
+  border: 1px solid;
+  grid-area: 'main';
 }
 
 .footer {
-    grid-area: footer;
-    border-radius: 4px;
+  grid-area: footer;
+  border: 1px solid;
+  grid-area: 'footer';
 }
 
-@media (min-width: 352px) {
-    .container {
-        height: 100vh;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(6, 200px);
-        gap: 2rem;
-        margin: auto 3rem;
-    }
+// @media (min-width: 352px) {
+//   .container {
+//     height: 100vh;
+//     display: grid;
+//     grid-template-columns: repeat(4, 1fr);
+//     grid-template-rows: repeat(6, 200px);
+//     gap: 2rem;
+//     margin: auto 3rem;
+//   }
 
-    .nav {
-        border-left: 0;
-    }
-}
+//   .nav {
+//     border-left: 0;
+//   }
+// }
 
-@media (min-width: 650px) {
-    .nav {
-        grid-column: 1 / 3;
-        grid-row: 1/ 2;
-        border-top: 2rem solid black;
-        display: flex;
-        justify-content: end;
-    }
+// @media (min-width: 650px) {
+//   .nav {
+//     grid-column: 1 / 3;
+//     grid-row: 1/ 2;
+//     border-top: 2rem solid black;
+//     display: flex;
+//     justify-content: end;
+//   }
 
-    .nav > * {
-        border-right: 10px solid black;
-        text-align: center;
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        display: flex;
-        flex-direction: column;
-    }
+//   .nav > * {
+//     border-right: 10px solid black;
+//     text-align: center;
+//     writing-mode: vertical-rl;
+//     text-orientation: mixed;
+//     display: flex;
+//     flex-direction: column;
+//   }
 
-    .nav ul > li {
-        font-weight: 700;
-    }
+//   .nav ul > li {
+//     font-weight: 700;
+//   }
 
-    .nav ul {
-        padding-left: 1rem;
-    }
-}
+//   .nav ul {
+//     padding-left: 1rem;
+//   }
+// }
