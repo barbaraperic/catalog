@@ -1,0 +1,17 @@
+{
+  "format": "custom",
+  "id": "homepage",
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      }
+    }
+  },
+  "label": "homepage",
+  "repeatable": true,
+  "status": true
+}
