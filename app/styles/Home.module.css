@@ -1,0 +1,12 @@
+.grid-title {
+  text-transform: uppercase;
+  font-family: var(--font-geist-mono);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 60em;
+  margin: 0 auto;
+  border: 1px solid;
+}

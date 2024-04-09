@@ -1,0 +1,10 @@
+.grid-title {
+  text-transform: uppercase;
+  font-family: var(--font-geist-mono);
+}
+
+.wrapper {
+  margin-block: 2rem;
+  margin-inline: auto;
+  max-width: 60em;
+}

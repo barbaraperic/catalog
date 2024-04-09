@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import './globals.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/Header/Header'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
+import '@/app/styles/globals.css'
+import '@/app/styles/shared.css'
 
 export const metadata: Metadata = {
   title: 'CatalogGarden',
@@ -19,8 +19,7 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body>
         <Header />
-        <main>{children}</main>
-        <Footer />
+        <main className="wrapper">{children}</main>
       </body>
     </html>
   )
