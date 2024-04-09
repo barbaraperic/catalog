@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-color: hsl(0, 0%, 9%);
-  --background-color: hsl(0, 0%, 100%);
-  --secondary-color: hsl(220, 4%, 64%);
+  --foreground-color-hsl: 0, 0%, 9%;
+  --background-color-hsl: 100, 0%, 100%;
+  --secondary-color-hsl: 220, 4%, 64%;
   --base: 1rem;
   --scale: 1.125;
   --h5: calc(var(--base) * var(--scale));
@@ -30,8 +30,8 @@ html {
 body {
   height: 100vh;
   width: 100vw;
-  background-color: var(--background-color);
-  color: var(--foreground-color);
+  background-color: hsla(var(--background-color));
+  color: hsla(var(--foreground-color-hsl));
 }
 
 h1,

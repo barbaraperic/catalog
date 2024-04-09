@@ -1,7 +1,8 @@
 function Playground({ className }: { className?: string }) {
   return (
     <div className={className}>
-      <p className={`grid-title`}>Playground</p>
+      <h2 className={`grid-title`}>Playground</h2>
+      <p>imperfect and informal jot-downs</p>
     </div>
   )
 }

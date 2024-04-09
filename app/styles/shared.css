@@ -1,10 +1,17 @@
 .grid-title {
   text-transform: uppercase;
   font-family: var(--font-geist-mono);
+  font-size: var(--h5);
 }
 
 .wrapper {
   margin-block: 2rem;
-  margin-inline: auto;
-  max-width: 60em;
+  margin-inline: 1rem;
+  max-width: 50em;
+}
+
+@media (min-width: 25em) {
+  .wrapper {
+    margin-inline: 2rem;
+  }
 }

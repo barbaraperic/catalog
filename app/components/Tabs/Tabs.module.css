@@ -1,0 +1,23 @@
+.tab-highlight {
+  background: hsl(0 0% 90.9%);
+  position: absolute;
+  top: 9px;
+  left: 0;
+  border-radius: 4px;
+  height: 32px;
+  transition: 0.15s ease;
+  transition-property: width, transform, opacity;
+}
+
+.tab {
+  padding: 16px 12px;
+  color: hsl(0 0% 43.5%);
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: color 250ms;
+}
+
+.tab:hover {
+  color: hsl(0 0% 9%);
+}
