@@ -1,0 +1,13 @@
+.header {
+  margin-block: 2rem;
+  margin-inline: auto;
+  max-width: 40em;
+}
+
+.h1 {
+  text-transform: uppercase;
+}
+
+.span {
+  color: var(--secondary-color);
+}

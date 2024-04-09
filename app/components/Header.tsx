@@ -1,5 +1,12 @@
+import styles from './Header.module.css'
+
 function Header() {
-  return <div></div>
+  return (
+    <div className={styles.header}>
+      <h1 className={`${styles.h1} h4`}>Digital Catalog</h1>
+      <span className={styles.span}>by Barbara Peric</span>
+    </div>
+  )
 }
 
 export default Header

@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
-import { DM_Sans } from 'next/font/google'
 import './globals.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
-
-const dmSans = DM_Sans({ subsets: ['latin'] })
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
 
 export const metadata: Metadata = {
   title: 'CatalogGarden',
@@ -17,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={dmSans.className}>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body>
         <Header />
         <main>{children}</main>
