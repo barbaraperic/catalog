@@ -20,7 +20,7 @@ const cards = [
 ]
 function Cards() {
   return (
-    <div>
+    <div className={styles.container}>
       {cards.map((card) => (
         <Link key={card.value} href={`/${card.value}`}>
           <h2 className={styles.title}>{card.title}</h2>

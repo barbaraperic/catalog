@@ -1,18 +1,11 @@
-import About from './components/About'
-import Cards from './components/Cards/Cards'
-import Spacer from './components/Spacer/Spacer'
-import Tabs from './components/Tabs/Tabs'
-import styles from './styles/Home.module.css'
+import Cards from './components/Cards'
+import Spacer from './components/Spacer'
+import Tabs from './components/Tabs'
 
 export default function Home() {
   return (
-    <div className={styles['home-container']}>
-      <div className={styles.container}>
-        {/* <Notes />
-        <Playground />
-        <Interactive /> */}
-        <Cards />
-      </div>
+    <div>
+      <Cards />
       <Spacer size="m" />
       <Tabs />
     </div>

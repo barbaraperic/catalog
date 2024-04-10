@@ -3,3 +3,11 @@
   font-family: var(--font-geist-mono);
   font-size: var(--h5);
 }
+
+.container {
+  padding-left: var(--padding-left);
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 auto;
+}

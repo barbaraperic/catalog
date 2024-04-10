@@ -20,7 +20,7 @@
 
 .tab {
   cursor: pointer;
-  padding: 10px 12px;
+  padding: var(--padding-left) 12px;
   font-size: 16px;
   color: hsl(0 0% 43.5%);
   display: inline-block;
