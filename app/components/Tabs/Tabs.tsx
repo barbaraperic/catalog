@@ -1,23 +1,31 @@
 'use client'
 
-import { useState, useRef } from 'react'
-import styles from './Tabs.module.css'
+import React from 'react'
+import styles from '@/app/components/Tabs/Tabs.module.css'
 
 const tabsData = [
   {
-    title: 'About',
-    value: 'about',
+    title: 'Notes',
+    value: 'sites',
+  },
+  {
+    title: 'Playground',
+    value: 'playground',
+  },
+  {
+    title: 'Interactive',
+    value: 'interactive',
   },
 ]
 
-function Tabs() {
-  const [tabBoundingBox, setTabBoundingBox] = useState(null)
-  const [wrapperBoundingBox, setWrapperBoundingBox] = useState(null)
-  const [highlightedTab, setHighlightedTab] = useState(null)
-  const [isHoveredFromNull, setIsHoveredFromNull] = useState(true)
+const Tabs = () => {
+  const [tabBoundingBox, setTabBoundingBox] = React.useState(null)
+  const [wrapperBoundingBox, setWrapperBoundingBox] = React.useState(null)
+  const [highlightedTab, setHighlightedTab] = React.useState(null)
+  const [isHoveredFromNull, setIsHoveredFromNull] = React.useState(true)
 
-  const wrapperRef = useRef(null)
-  const highlightRef = useRef(null)
+  const highlightRef = React.useRef(null)
+  const wrapperRef = React.useRef(null)
 
   const repositionHighlight = (e, tab) => {
     setTabBoundingBox(e.target.getBoundingClientRect())
@@ -28,29 +36,37 @@ function Tabs() {
 
   const resetHighlight = () => setHighlightedTab(null)
 
-  const highlightStyles = {} as any
+  const highlightStyles = {}
 
   if (tabBoundingBox && wrapperBoundingBox) {
     highlightStyles.transitionDuration = isHoveredFromNull ? '0ms' : '150ms'
     highlightStyles.opacity = highlightedTab ? 1 : 0
     highlightStyles.width = `${tabBoundingBox.width}px`
-    highlightStyles.transform = `translate(${
-      tabBoundingBox.left - wrapperBoundingBox.left
+    highlightStyles.transform = `translateY(${
+      tabBoundingBox.top - wrapperBoundingBox.top
     }px)`
   }
 
   return (
-    <div ref={wrapperRef} onMouseLeave={resetHighlight}>
-      <div ref={highlightRef} className={styles['tab-highlight']}>
-        {tabsData.map((tab) => (
-          <a
-            key={tab.value}
-            onMouseOver={(ev) => repositionHighlight(ev, tab)}
-            href=""
-            className={styles.tab}
-          ></a>
-        ))}
-      </div>
+    <div
+      className={styles['tab-nav']}
+      ref={wrapperRef}
+      onMouseLeave={resetHighlight}
+    >
+      <div
+        className={styles['tabs-highlight']}
+        ref={highlightRef}
+        style={highlightStyles}
+      ></div>
+      {tabsData.map((tab) => (
+        <a
+          className={styles.tab}
+          key={tab.value}
+          onMouseOver={(ev) => repositionHighlight(ev, tab)}
+        >
+          {tab.title}
+        </a>
+      ))}
     </div>
   )
 }
