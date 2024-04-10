@@ -1,0 +1,5 @@
+.title {
+  text-transform: uppercase;
+  font-family: var(--font-geist-mono);
+  font-size: var(--h5);
+}

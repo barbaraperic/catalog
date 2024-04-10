@@ -10,17 +10,17 @@
 .tabs-highlight {
   background: hsl(0 0% 90.9%);
   position: absolute;
-  top: 9px;
+  top: 5px;
   left: 0;
   border-radius: 4px;
-  height: 2.2rem;
+  height: 2.1rem;
   transition: 0.15s ease;
   transition-property: width, transform, opacity;
 }
 
 .tab {
   cursor: pointer;
-  padding: 14px 12px;
+  padding: 10px 12px;
   font-size: 16px;
   color: hsl(0 0% 43.5%);
   display: inline-block;
