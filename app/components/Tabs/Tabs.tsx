@@ -1,16 +1,16 @@
 'use client'
 
-import React from 'react'
+import { useState, useRef, ChangeEvent } from 'react'
 import styles from '@/app/components/Tabs/Tabs.module.css'
 
 const tabsData = [
   {
-    title: 'Notes',
-    value: 'sites',
+    title: 'About',
+    value: 'about',
   },
   {
-    title: 'Playground',
-    value: 'playground',
+    title: 'Email',
+    value: 'email',
   },
   {
     title: 'Interactive',
@@ -19,15 +19,15 @@ const tabsData = [
 ]
 
 const Tabs = () => {
-  const [tabBoundingBox, setTabBoundingBox] = React.useState(null)
-  const [wrapperBoundingBox, setWrapperBoundingBox] = React.useState(null)
-  const [highlightedTab, setHighlightedTab] = React.useState(null)
-  const [isHoveredFromNull, setIsHoveredFromNull] = React.useState(true)
+  const [tabBoundingBox, setTabBoundingBox] = useState<any>(null)
+  const [wrapperBoundingBox, setWrapperBoundingBox] = useState<any>(null)
+  const [highlightedTab, setHighlightedTab] = useState(null)
+  const [isHoveredFromNull, setIsHoveredFromNull] = useState(true)
 
-  const highlightRef = React.useRef(null)
-  const wrapperRef = React.useRef(null)
+  const highlightRef = useRef<any | null>(null)
+  const wrapperRef = useRef<any | null>(null)
 
-  const repositionHighlight = (e, tab) => {
+  const repositionHighlight = (e: any, tab: any) => {
     setTabBoundingBox(e.target.getBoundingClientRect())
     setWrapperBoundingBox(wrapperRef.current.getBoundingClientRect())
     setIsHoveredFromNull(!highlightedTab)
@@ -36,7 +36,14 @@ const Tabs = () => {
 
   const resetHighlight = () => setHighlightedTab(null)
 
-  const highlightStyles = {}
+  interface HighlightStylesType {
+    transitionDuration: string
+    opacity: number
+    width: string
+    transform: string
+  }
+
+  const highlightStyles = {} as HighlightStylesType
 
   if (tabBoundingBox && wrapperBoundingBox) {
     highlightStyles.transitionDuration = isHoveredFromNull ? '0ms' : '150ms'
