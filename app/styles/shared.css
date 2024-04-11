@@ -5,13 +5,24 @@
 }
 
 .wrapper {
-  margin-block: 2rem;
-  margin-inline: 1rem;
-  max-width: 50em;
+  margin: 1rem auto;
+  padding-left: var(--padding-left);
+}
+
+.wrapper h1 {
+  font-size: 1em;
+  container-name: wrapper;
 }
 
 @media (min-width: 25em) {
   .wrapper {
-    margin-inline: 2rem;
+    margin: 2rem auto;
+    max-width: 50em;
+  }
+}
+
+@container wrapper (min-width: 25em) {
+  .wrapper h1 {
+    font-size: 2em;
   }
 }

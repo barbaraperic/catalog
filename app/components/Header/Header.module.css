@@ -7,6 +7,5 @@
 }
 
 .link {
-  padding-left: var(--padding-left);
   display: inline-block;
 }
