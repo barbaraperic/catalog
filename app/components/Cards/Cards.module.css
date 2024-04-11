@@ -8,5 +8,8 @@
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
-  margin: 0 auto;
+}
+
+.subtitle {
+  padding-left: var(--padding-left);
 }

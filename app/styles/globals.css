@@ -65,3 +65,9 @@ span,
 p {
   font-size: var(--base);
 }
+
+@media (min-width: 58em) {
+  p {
+    max-width: 38em;
+  }
+}

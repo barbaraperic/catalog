@@ -5,7 +5,7 @@
 }
 
 .wrapper {
-  margin: 1rem auto;
+  margin: 2rem auto;
   padding-left: var(--padding-left);
 }
 
@@ -16,7 +16,6 @@
 
 @media (min-width: 25em) {
   .wrapper {
-    margin: 2rem auto;
     max-width: 50em;
   }
 }
