@@ -15,10 +15,8 @@ export default async function AllNotes() {
         return (
           <div key={title} className={styles.container}>
             <span className={styles.date}>{date}</span>
-            <Link href="" className={styles.link}>
-              <div className="">
-                <div className="">{title}</div>
-              </div>
+            <Link href={`notes/${article.slug}`} className={styles.link}>
+              {title}
             </Link>
           </div>
         )

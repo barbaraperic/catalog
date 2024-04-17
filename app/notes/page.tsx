@@ -4,7 +4,7 @@ import styles from './page.module.css'
 function NotesPage() {
   return (
     <div className={styles.container}>
-      <h3 className={styles.title}>All Notes</h3>
+      <h3 className={styles.title}>Notes</h3>
       <AllNotes />
     </div>
   )
