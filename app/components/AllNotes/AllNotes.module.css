@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  gap: 1rem;
+}
+
+.date {
+  color: hsla(var(--secondary-color-hsl));
+}
+
+.link:hover {
+  text-decoration: underline;
+}

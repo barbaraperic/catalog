@@ -1,10 +1,13 @@
-import AllArticles from "../components/AllNotes/AllNotes";
+import AllNotes from '../components/AllNotes'
+import styles from './page.module.css'
 
-export default async function Page() {
+function NotesPage() {
   return (
-    <div className="m-4 sm:m-8">
-      <h1 className="mb-20 text-center text-4xl font-bold">All Articles:</h1>
-      <AllArticles />
+    <div className={styles.container}>
+      <h3 className={styles.title}>All Notes</h3>
+      <AllNotes />
     </div>
-  );
+  )
 }
+
+export default NotesPage
