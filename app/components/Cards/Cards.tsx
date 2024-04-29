@@ -69,7 +69,11 @@ function Cards() {
         style={highlightStyles}
       ></div>
       {cards.map((card) => (
-        <Link key={card.value} href={`/${card.value}`}>
+        <Link
+          key={card.value}
+          href={`/${card.value}`}
+          className={cardStyles.link}
+        >
           <h2
             className={`${styles.tab} ${cardStyles.title}`}
             onMouseOver={(ev) => repositionHighlight(ev, card)}

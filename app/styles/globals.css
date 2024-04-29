@@ -87,6 +87,11 @@
       max-width: 38em;
     }
   }
+
+  a {
+    text-decoration: none;
+    color: deeppink;
+  }
 }
 
 @layer layout {

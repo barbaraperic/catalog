@@ -12,10 +12,6 @@ const tabsData = [
     title: 'Email',
     value: 'email',
   },
-  {
-    title: 'Interactive',
-    value: 'interactive',
-  },
 ]
 
 const Tabs = () => {
