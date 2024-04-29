@@ -66,6 +66,7 @@ const Tabs = () => {
           className={styles.tab}
           key={tab.value}
           onMouseOver={(ev) => repositionHighlight(ev, tab)}
+          href={`/${tab.value}`}
         >
           {tab.title}
         </a>
